@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+/* https://coolors.co/09090b-84130b-aa180e-fff8f0-f6eee6-132153-1a2e74 */
+
+/* CSS Reset */
+html, body, div, span, a, h1, h2, h3, h4, h5, h6, p, blockquote, img, ol, ul, li, input, label, select, table, tbody, tfoot, thead, tr, th, td, footer, header, menu, nav, section, video {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    list-style: none;
+    border: 0;
+}
+
+body{
+    background-color: #FFF8F0;
+    font-family: 'Merriweather', sans-serif;
+    color:#09090B;
+}
+
+header{
+    text-align: center;
+}
+
+nav{
+    background-color: #84130B;
+    font-family:'Bebas Neue', sans-serif;
+}
+
+nav a{
+    color:#FFF8F0;
+    text-decoration: none;
+    font-size: 2em;
+    padding:5px 40px;
+    display: inline-block;
+}
+
+nav a:hover{
+    background-color: #AA180E;
+    /* font-weight: bold; */
+}
+
+main{
+    max-width:750px;
+    margin:0 auto 50px;
+}
+
+footer{
+    background-color: #84130B;
+    /* height:130px; */
+    padding:20px;
+    color:#FFF8F0;
+    font-size: .75em;
+    display: grid;
+    grid-template-columns: 3fr 2fr 2fr;
+}
+
+footer a{
+    text-decoration: none;
+    color:#FFF8F0;
+}
+
+footer a:hover{
+    text-decoration:underline;
+    color:#FFF8F0;
+}
+
+footer .footerText{
+    margin:auto;
+}
+
+footer .klaviyo-form-UnGYXz{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+footer p{
+    margin:0;
+}
+
+h1{
+    font-size: 1.7em;
+}
+
+h2{
+    font-size: 1.2em;
+    margin:10px 0;
+}
+
+p{
+    margin:10px 0;
+}
+
+a{
+    color:#84130B;
+}
+
+a::after{
+    text-decoration: underline;
+    color:#84130B;
+}
+
+#logo{
+    padding:30px;
+    height:5vw;
+    max-width: 800px;
+    cursor: pointer;
+}
+
+/* --------------------------------- Home Page --------------------------------- */
+#hero{
+    position: relative;
+    text-align: center;
+}
+
+#heroImage{
+    width: 100%;
+    margin-top: 15px;
+}
+
+#heroText{
+    position:absolute;
+    color:#FFF8F0;
+    top:40%;
+    left:50%;
+    transform: translate(-50%, -40%);
+    width:480px;
+}
+
+#heroText h1, #heroText p{
+    margin:0;
+}
+
+#homeGrid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    margin-top:50px;
+}
+
+#homeGrid div{
+    width:350px;
+    height:350px;
+    border:#09090B solid 1px;
+    margin:0 auto;
+    background-image: url("images/oldWriting.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#homeGrid p{
+    margin-top: 150px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.7em;
+}
+
+/* --------------------------------- Articles Page --------------------------------- */
+.articlePreview{
+    border-top: 1px solid #09090B;
+    padding:10px;
+}
+
+.articlePreview a{
+    text-decoration: none;
+    color:#09090B;
+    font-family: 'Bebas Neue';
+}
+
+.articlePreview a p{
+    font-family: 'Merriweather';
+}
+
+.articlePreview:hover{
+    background-color: #F6EEE6;
+}
+
+.comingSoon{
+    border-top: 1px solid #09090B;
+    padding:10px;
+}
+
+.comingSoon h1{
+    text-decoration: none;
+    color:#09090B;
+    font-family: 'Bebas Neue';
+}
+
+.comingSoon h1 span{
+    text-decoration: none;
+    color:#84130B;
+    font-family: 'Bebas Neue';
+}
+
+/* --------------------------------- About Page --------------------------------- */
+#portrait{
+    width: 170px;
+    padding:0 10px 0 0;
+    float:left;
+}
+
+#about p span{
+    font-weight: bold;
+    font-size:1.5em;
+}
+
+/* --------------------------------- Article Pages --------------------------------- */
+.quote{
+    font-style: italic;
+    max-width: 750px;
+    margin:50px auto;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap:30px;
+}
+
+.quote img{
+    width: 170px;
+}
+
+.quote p{
+    margin:auto;
+}
+
+/* tablet & phone */
+@media screen and (max-width: 750px) {
+    footer{
+        display:block;
+    }
+
+    #heroText{
+        width:100%;
+        top:35%;
+    }
+    #heroImage{
+        margin-top:0;
+    }
+
+    p, h1, h2{
+        padding:0 15px;
+    }
+
+    nav a{
+        padding:5px 25px;
+    }
+
+    footer p{
+        padding:0;
+    }
+
+    .footerText{
+        padding-top: 15px;
+    }
+
+    .comingSoon{
+        padding:20px 10px 10px 10px;
+    }
+
+    .articlePreview{
+        padding:20px 10px 10px 10px;
+    }
+
+    .klaviyo-form-UnGYXz{
+        padding-bottom:100px;
+    }
+}
