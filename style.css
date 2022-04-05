@@ -2,5 +2,17 @@
 
 body{
     font-family:'Cinzel', serif;
-    background-color: gray;
+    background-color: rgb(240, 240, 240);
+}
+
+header{
+    text-align: center;
+}
+
+main {
+    text-align: center;
+}
+
+a {
+    color:rgb(189, 0, 0);
 }
