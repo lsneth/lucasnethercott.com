@@ -1,0 +1,15 @@
+input{
+    display:block;
+    margin:20px;
+}
+
+#loginButton{
+    background-color: #f16543;
+    border:none;
+    padding:10px 20px;
+}
+
+#loginButton:hover{
+    background-color: #ff8161;
+    cursor: pointer;
+}

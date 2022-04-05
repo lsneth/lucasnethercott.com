@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const API_KEY=process.env.TMDB_API_KEY;
 const MOVIE_DATA_URL='https://api.themoviedb.org/3/search/movie?api_key={api_key}&query=';
 const WATCH_PROVIDER_URL='https://api.themoviedb.org/3/movie/{movie_id}/watch/providers?api_key=<<api_key>>';
