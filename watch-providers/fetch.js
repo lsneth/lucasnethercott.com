@@ -1,3 +1,9 @@
+const API_KEY=process.env.TMDB_API_KEY;
+const MOVIE_DATA_URL='https://api.themoviedb.org/3/search/movie?api_key={api_key}&query=';
+const WATCH_PROVIDER_URL='https://api.themoviedb.org/3/movie/{movie_id}/watch/providers?api_key=<<api_key>>';
+const POSTER_IMAGE_URL='https://image.tmdb.org/t/p/w200'
+const LOGO_IMAGE_URL='https://image.tmdb.org/t/p/original'
+
 // function that displays the movie title and platforms where it is currently streaming
 function displayData(watchProviderData, movieData){
     document.querySelector('#streamTitle').innerHTML='Stream';
