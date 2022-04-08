@@ -3,13 +3,13 @@ input{
     margin:20px;
 }
 
-#loginButton{
+#fetchDataButton{
     background-color: #f16543;
     border:none;
     padding:10px 20px;
 }
 
-#loginButton:hover{
+#fetchDataButton:hover{
     background-color: #ff8161;
     cursor: pointer;
 }
