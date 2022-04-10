@@ -19,9 +19,12 @@
             Searching is done using the TMDB database.
         </p>
     </div>
+    <form onsubmit=fetchData()>
+        <input type='text' placeholder='Enter a movie title...' id='titleQuery'><br>
+        <input type='submit' value='Search' id='searchButton'></input><br>
+    </form>
 
-    <input type='text' placeholder='Enter a movie title...' id='titleQuery'><br>
-    <button type='button' onclick=fetchMovieData()>Search</button><br>
+    <p id='results'></p>
 
     <h1 id='streamTitle'></h1>
     <p id='flatrate'></p>
@@ -32,5 +35,5 @@
     <h1 id='buyTitle'></h1>
     <p id='buy'></p>
 </body>
-<script src='fetch.js'></script>
+<script src='displayResults.js'></script>
 </html>

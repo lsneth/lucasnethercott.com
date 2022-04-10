@@ -39,10 +39,12 @@ function formatUrlForMovieData(url, apiKey, userQuery){
 
 // function that returns watch provider data
 function fetchWatchProviders(movieData){
-    movieId=getMovieId(movieData);
-    fetch(formatUrlForWatchProviders(WATCH_PROVIDER_URL, API_KEY, movieId))
-    .then(response => response.json())
-    .then(watchProviderData => displayData(watchProviderData, movieData));
+    let movies=getMovies(movieData);
+    displayData(watchProviderData, movieData);
+
+    // fetch(formatUrlForWatchProviders(WATCH_PROVIDER_URL, API_KEY, movies))
+    // .then(response => response.json())
+    // .then(watchProviderData => displayData(watchProviderData, movieData));
 }
 
 function formatUrlForWatchProviders(url, apiKey, movieId){
@@ -53,8 +55,12 @@ function formatUrlForWatchProviders(url, apiKey, movieId){
 
 
 // function that gets the movie id from the data
-function getMovieId(movieData){
-    return movieData['results'][0]['id']
+function r(movieData){
+    let movies=[]
+    for(let movie of movieData['results']){
+        movies.push(movie);
+    }
+    return movies;
 }
 
 function getMovieImage(movieData){
