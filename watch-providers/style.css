@@ -4,32 +4,25 @@ body{
     text-align: center;
     font-family: 'Poppins', sans-serif;
     background-color: rgba(165, 42, 42, 0.068);
+    margin:0;
+    color:black;
 }
 
 h1{
     font-family: 'Limelight', cursive;
 }
 
-#searchButton{
-    padding:15px 30px;
-    margin:20px;
-    font-family: 'Poppins', sans-serif;
-    color:white;
-    background-color: brown;
-    border:0;
-    border-radius: 5px;
+a{
+    text-decoration: none;
+    color:black;
 }
 
-#searchButton:hover{
-    background-color: rgb(182, 55, 55);
-    cursor: pointer;
-}
-
-input{
+#titleQuery{
     font-family: 'Poppins', sans-serif;
+    border:2px solid black;
     width:300px;
-    padding: 10px 15px;
     border-radius: 5px;
+    padding:10px;
 }
 
 #movieHeader{
@@ -37,10 +30,33 @@ input{
 }
 
 #instructions{
-    padding-top: 150px;
+    padding:20px;
 }
 
 #results{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: inline;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+}
+
+.result{
+    width:200px;
+    height: 100px;
+    display: inline-block;
+    padding:30px;
+    cursor: pointer;
+}
+
+.button{
+    font-family: 'Poppins', sans-serif;
+    color:white;
+    background-color: brown;
+    border:none;
+    border-radius: 5px;
+    padding:10px 50px;
+    margin:10px;
+}
+
+.button:hover{
+    background-color: rgb(182, 55, 55);
+    cursor: pointer;
 }

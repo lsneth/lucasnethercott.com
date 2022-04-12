@@ -1,8 +1,4 @@
 const API_KEY='fe107f0049ae296497a71c6ed3b25a83';
-const MOVIE_DATA_URL='https://api.themoviedb.org/3/search/movie?api_key={api_key}&query=';
-const WATCH_PROVIDER_URL='https://api.themoviedb.org/3/movie/{movie_id}/watch/providers?api_key=<<api_key>>';
-const POSTER_IMAGE_URL='https://image.tmdb.org/t/p/w200';
-const LOGO_IMAGE_URL='https://image.tmdb.org/t/p/original';
 
 // calls the api with the user entered movie title
 function fetchData(){
@@ -20,15 +16,16 @@ function getMovies(data){
     for(let movie of data['results']){
         movies.push(movie);
     }
-    displayMovies(movies);
+    displayResults(movies);
 }
 
 // takes a list of movies and displays each movie in the list
-function displayMovies(movies){
+function displayResults(movies){
     removeResults();
     for(let movie of movies){
         let result=document.createElement('a');
-        result.setAttribute('href', 'lucasnethercott.com');
+        result.setAttribute('href', 'movie.html?movieId='+getMovieId(movie)+'&title='+getMovieTitle(movie)+'&imageUrl='+getMovieImage(movie));
+        result.setAttribute('id', getMovieId(movie));
         result.setAttribute('class', 'result');
         document.querySelector('#results').append(result);
 
@@ -45,12 +42,21 @@ function displayMovies(movies){
 // returns image URL of the given movie
 function getMovieImage(movie){
     let posterImageUrl='https://image.tmdb.org/t/p/w200';
+
+    if(movie['poster_path']==null){
+        return 'noImage.jpg';
+    }
+
     return posterImageUrl+movie['poster_path'];
 }
 
 // returns title of the given movie
 function getMovieTitle(movie){
     return movie['original_title'];
+}
+
+function getMovieId(movie){
+    return movie['id'];
 }
 
 // resets search results
