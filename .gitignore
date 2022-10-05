@@ -1,2 +1,26 @@
 .env
 node_modules/
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+.gradebook/node_modules
+.gradebook/.pnp
+.gradebook/pnp.js
+
+# testing
+.gradebook/coverage
+
+# production
+.gradebook/build
+
+# misc
+.gradebook/DS_Store
+.gradebook/env.local
+.gradebook/env.development.local
+.gradebook/env.test.local
+.gradebook/env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
