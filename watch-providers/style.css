@@ -2,14 +2,7 @@
 
 body{
     text-align: center;
-    font-family: 'Poppins', sans-serif;
-    background-color: rgba(165, 42, 42, 0.068);
-    margin:0;
-    color:black;
-}
-
-h1{
-    font-family: 'Limelight', cursive;
+    color:rgb(0, 0, 0);
 }
 
 a{
@@ -46,17 +39,24 @@ a{
     cursor: pointer;
 }
 
-.button{
-    font-family: 'Poppins', sans-serif;
+button{
     color:white;
     background-color: brown;
     border:none;
     border-radius: 5px;
     padding:10px 50px;
-    margin:10px;
+    margin:10px auto;
+    display:block;
 }
 
 .button:hover{
     background-color: rgb(182, 55, 55);
     cursor: pointer;
+}
+
+#tmdb-logo{
+    width:100px;
+    position: fixed;
+    bottom:20px;
+    margin-left: -50px
 }
