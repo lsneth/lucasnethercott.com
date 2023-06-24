@@ -22,6 +22,8 @@ export default async function displayResults(){
         imageEl.setAttribute('src', image)
         result.append(imageEl)
     })
+    
+    document.querySelector("#search-form").reset()
 }
 
 // gets movie data from the api with the user entered movie title
