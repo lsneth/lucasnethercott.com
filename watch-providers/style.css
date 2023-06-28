@@ -1,62 +1,86 @@
 @import url('https://fonts.googleapis.com/css2?family=Limelight&family=Poppins:wght@500&display=swap');
 
-body{
-    text-align: center;
-    color:rgb(0, 0, 0);
+body {
+  text-align: center;
+  color: rgb(0, 0, 0);
 }
 
-a{
-    text-decoration: none;
-    color:black;
+a {
+  text-decoration: none;
+  color: black;
 }
 
-#titleQuery{
-    font-family: 'Poppins', sans-serif;
-    border:2px solid black;
-    width:300px;
-    border-radius: 5px;
-    padding:10px;
+#movieHeader {
+  height: 400px;
 }
 
-#movieHeader{
-    height: 400px;
+#instructions {
+  padding: 20px;
 }
 
-#instructions{
-    padding:20px;
+#shows {
+  display: inline;
+  /* grid-template-columns: 1fr 1fr 1fr; */
 }
 
-#results{
-    display: inline;
-    /* grid-template-columns: 1fr 1fr 1fr; */
+.show {
+  width: 200px;
+  height: 100px;
+  display: inline-block;
+  padding: 30px;
+  cursor: pointer;
 }
 
-.result{
-    width:200px;
-    height: 100px;
-    display: inline-block;
-    padding:30px;
-    cursor: pointer;
+button {
+  color: white;
+  background-color: brown;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 50px;
+  margin: 10px auto;
+  display: block;
+  cursor: pointer;
 }
 
-button{
-    color:white;
-    background-color: brown;
-    border:none;
-    border-radius: 5px;
-    padding:10px 50px;
-    margin:10px auto;
-    display:block;
+#tmdb-logo {
+  width: 100px;
+  position: fixed;
+  bottom: 20px;
+  margin-left: -50px;
 }
 
-.button:hover{
-    background-color: rgb(182, 55, 55);
-    cursor: pointer;
+#user-input {
+  font-family: 'Poppins', sans-serif;
+  border: 2px solid black;
+  width: 300px;
+  border-radius: 5px;
+  padding: 10px;
+  display: block;
+  margin: 10px auto;
 }
 
-#tmdb-logo{
-    width:100px;
-    position: fixed;
-    bottom:20px;
-    margin-left: -50px
+.radio-button {
+  display: inline-block;
+}
+
+.radio-button label {
+  display: inline;
+  background-color: bisque;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.radio-button input {
+  display: none;
+}
+
+.radio-button input:checked + label {
+  background: #20b8be;
+  border-bottom: solid black 3px;
+  border-radius: 5px;
+}
+
+.radio-button label {
+  cursor: pointer;
+  line-height: 50px;
 }

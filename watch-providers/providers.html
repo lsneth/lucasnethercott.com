@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="pageTitle"></title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V2E5N6JZP8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+
+      gtag('config', 'G-V2E5N6JZP8')
+    </script>
+  </head>
+  <body>
+    <div id="movieHeader"></div>
+
+    <h2>Stream</h2>
+    <div id="flatrate"></div>
+
+    <h2>Rent</h2>
+    <div id="rent"></div>
+
+    <h2>Buy</h2>
+    <div id="buy"></div>
+
+    <button onclick='location.href="index.html";' class="button">search again</button>
+  </body>
+  <script src="displayShow.js"></script>
+</html>

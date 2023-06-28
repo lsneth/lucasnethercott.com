@@ -1,53 +1,54 @@
-const API_KEY='fe107f0049ae296497a71c6ed3b25a83'
+const API_KEY = 'fe107f0049ae296497a71c6ed3b25a83'
 
-// takes a list of movies and displays each movie in the list
-export default async function displayResults(){
-    const movies = await getMovieData()
+// takes a list of movies/tv shows and displays each one in the list
+export default async function displayShows(showType = 'tv') {
+  document.querySelector('.show') && removeShows()
 
-    document.querySelector('.result') && removeResults()
+  const shows = await getShowData(showType)
 
-    movies.map(movie => {
-        const image = getMovieImage(movie)
+  shows.map((show) => {
+    const image = getShowImage(show)
+    const title = showType === 'movie' ? show.original_title : show.name
 
-        const result=document.createElement('a')
-        result.setAttribute('href', `movie.html?movieId=${movie.id}&title=${movie.original_title}&imageUrl=${image}`)
-        result.setAttribute('class', 'result')
-        document.querySelector('#results').append(result)
-        
-        const titleEl=document.createElement('h3')
-        titleEl.textContent=movie.original_title
-        result.append(titleEl)
-        
-        const imageEl=document.createElement('img')
-        imageEl.setAttribute('src', image)
-        result.append(imageEl)
-    })
-    
-    document.querySelector("#search-form").reset()
+    const showEl = document.createElement('a')
+    showEl.setAttribute('href', `providers.html?id=${show.id}&showType=${showType}&title=${title}&imageUrl=${image}`)
+    showEl.setAttribute('class', 'show')
+    document.querySelector('#shows').append(showEl)
+
+    const titleEl = document.createElement('h3')
+    titleEl.textContent = title
+    showEl.append(titleEl)
+
+    const imageEl = document.createElement('img')
+    imageEl.setAttribute('src', image)
+    showEl.append(imageEl)
+  })
+
+  document.querySelector('#search-form').reset()
 }
 
-// gets movie data from the api with the user entered movie title
-async function getMovieData(){
-    const userInput=document.querySelector("#user-input").value
-    const url = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${userInput.replace(' ', '+')}`
-    
-    const res = await fetch(url)
-    const data = await res.json()
-    return data.results
+// gets movie/tv data from the api with the user entered movie title
+async function getShowData(showType) {
+  const userInput = document.querySelector('#user-input').value
+  const url = `https://api.themoviedb.org/3/search/${showType}?api_key=${API_KEY}&query=${userInput.replace(' ', '+')}`
+
+  const res = await fetch(url)
+  const data = await res.json()
+  return data.results
 }
 
 // returns image URL of the given movie
-function getMovieImage(movie){
-    const posterImageUrl='https://image.tmdb.org/t/p/w200'
+function getShowImage(show) {
+  const posterImageUrl = 'https://image.tmdb.org/t/p/w200'
 
-    if(movie.poster_path==null){
-        return 'noImage.jpg'
-    }
-    return posterImageUrl+movie.poster_path
+  if (show.poster_path == null) {
+    return 'noImage.jpg'
+  }
+  return `${posterImageUrl}${show.poster_path}`
 }
 
-// resets search results
-function removeResults(){
-    const results=document.querySelectorAll('.result')
-    results.forEach(result => result.remove())
+// removes search results
+function removeShows() {
+  const shows = document.querySelectorAll('.show')
+  shows.forEach((show) => show.remove())
 }

@@ -1,7 +1,7 @@
-import displayResults from "./displayResults.js"
+import displayShows from './displayResults.js'
 
 const searchForm = document.getElementById('search-form')
-searchForm.addEventListener('submit', (e)=>{
-    e.preventDefault()
-    displayResults()
+searchForm.addEventListener('submit', (e) => {
+  e.preventDefault()
+  displayShows(e.target.mediaType.value)
 })
