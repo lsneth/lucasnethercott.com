@@ -11,7 +11,7 @@ export default async function displayShows(showType = 'tv') {
     const title = showType === 'movie' ? show.original_title : show.name
 
     const showEl = document.createElement('a')
-    showEl.setAttribute('href', `providers.html?id=${show.id}&showType=${showType}&title=${title}&imageUrl=${image}`)
+    showEl.setAttribute('href', `show.html?id=${show.id}&showType=${showType}&title=${title}&imageUrl=${image}`)
     showEl.setAttribute('class', 'show')
     document.querySelector('#shows').append(showEl)
 
@@ -39,12 +39,12 @@ async function getShowData(showType) {
 
 // returns image URL of the given movie
 function getShowImage(show) {
-  const posterImageUrl = 'https://image.tmdb.org/t/p/w200'
+  const imageUrl = 'https://image.tmdb.org/t/p/w200'
 
   if (show.poster_path == null) {
     return 'noImage.jpg'
   }
-  return `${posterImageUrl}${show.poster_path}`
+  return `${imageUrl}${show.poster_path}`
 }
 
 // removes search results
