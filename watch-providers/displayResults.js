@@ -5,26 +5,23 @@ export default async function displayShows(showType = 'tv') {
   document.querySelector('.show') && removeShows()
 
   const shows = await getShowData(showType)
-
   shows.map((show) => {
-    const image = getShowImage(show)
-    const title = showType === 'movie' ? show.original_title : show.name
-
-    const showEl = document.createElement('a')
-    showEl.setAttribute('href', `show.html?id=${show.id}&showType=${showType}&title=${title}&imageUrl=${image}`)
-    showEl.setAttribute('class', 'show')
-    document.querySelector('#shows').append(showEl)
-
-    const titleEl = document.createElement('h3')
-    titleEl.textContent = title
-    showEl.append(titleEl)
-
-    const imageEl = document.createElement('img')
-    imageEl.setAttribute('src', image)
-    showEl.append(imageEl)
+    if (show.poster_path) { // if it isn't mainstream enough to have a cover, I'm not going to mess with styling it
+      document.querySelector('body').insertAdjacentHTML('beforeend', showTemplate(show, showType) ?? '')
+    }
   })
 
   document.querySelector('#search-form').reset()
+}
+
+function showTemplate(show, showType) {
+  const image = `https://image.tmdb.org/t/p/w300${show.poster_path}`
+
+  return `
+      <a href='show.html?id=${show.id}&showType=${showType}&title=${show.name ?? show.original_title}&imageUrl=${image}' class='show'>
+        <img src='${image}'/>
+      </a>
+    `
 }
 
 // gets movie/tv data from the api with the user entered movie title
@@ -35,16 +32,6 @@ async function getShowData(showType) {
   const res = await fetch(url)
   const data = await res.json()
   return data.results
-}
-
-// returns image URL of the given movie
-function getShowImage(show) {
-  const imageUrl = 'https://image.tmdb.org/t/p/w200'
-
-  if (show.poster_path == null) {
-    return 'noImage.jpg'
-  }
-  return `${imageUrl}${show.poster_path}`
 }
 
 // removes search results
