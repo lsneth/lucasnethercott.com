@@ -2,14 +2,29 @@ const API_KEY = 'fe107f0049ae296497a71c6ed3b25a83'
 
 // takes a list of movies/tv shows and displays each one in the list
 export default async function displayShows(showType = 'tv') {
-  document.querySelector('.show') && removeShows()
+  (document.querySelector('.show') || document.querySelector('#noResultsString')) && removeResults()
 
   const shows = await getShowData(showType)
-  shows.map((show) => {
-    if (show.poster_path) { // if it isn't mainstream enough to have a cover, I'm not going to mess with styling it
-      document.querySelector('body').insertAdjacentHTML('beforeend', showTemplate(show, showType) ?? '')
-    }
-  })
+
+  const noResultsStrings = [
+    // TODO: add more funny strings haha
+    'Sorry, we don\'t have any matches for your imaginary movie! Care to search for something, you know, real? ;)',
+    'Second grade spelling bee champ you were not. Try again, you must. ;)',
+    'Well that\'s embarrasing... for you! What do you think this is a spell checker? ;)'
+  ]
+
+  console.log(shows)
+
+  if (shows[0]) {
+    shows.map((show) => {
+      if (show.poster_path) {
+        // if it isn't mainstream enough to have a cover, I'm not going to mess with styling it
+        document.querySelector('body').insertAdjacentHTML('beforeend', showTemplate(show, showType) ?? '')
+      }
+    })
+  }else{
+    document.querySelector('body').insertAdjacentHTML('beforeend', `<p id="noResultsString">${noResultsStrings[Math.floor(Math.random()*noResultsStrings.length)]}</p>`)
+  }
 
   document.querySelector('#search-form').reset()
 }
@@ -35,7 +50,8 @@ async function getShowData(showType) {
 }
 
 // removes search results
-function removeShows() {
+function removeResults() {
   const shows = document.querySelectorAll('.show')
   shows.forEach((show) => show.remove())
+  document.querySelector('#noResultsString').remove()
 }
