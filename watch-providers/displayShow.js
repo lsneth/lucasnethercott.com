@@ -1,3 +1,5 @@
+import { getWatchProviders, getBackdropImage } from './services.js'
+
 const API_KEY = 'fe107f0049ae296497a71c6ed3b25a83'
 const LOGO_IMAGE_URL = 'https://image.tmdb.org/t/p/original'
 
@@ -9,7 +11,7 @@ async function showTemplate() {
   return `
   <div id='showHeader'>
     <div id='backdropImageGradient'>
-      <img id='backdropImage' src='${await getShowBackdropImage()}'/>
+      <img id='backdropImage' src='${await getBackdropImage(PARAMS.showType, PARAMS.showId)}'/>
     </div>
     <img id='posterImage' src='${PARAMS.imageUrl}'/>
     <h1 id='title'>${PARAMS.title}</h1>
@@ -35,7 +37,7 @@ async function displayShow() {
 }
 
 async function displayProviders() {
-  const show = await getWatchProviders()
+  const show = await getWatchProviders(PARAMS.showType, PARAMS.showId)
   const watchTypes = ['flatrate', 'rent', 'buy']
 
   watchTypes.map((watchType) => {
@@ -54,31 +56,6 @@ async function displayProviders() {
       document.querySelector('#' + watchType).append(noneEl)
     }
   })
-}
-
-async function getWatchProviders() {
-  const url = `https://api.themoviedb.org/3/${PARAMS.showType}/${PARAMS.id}/watch/providers?api_key=${API_KEY}`
-
-  const res = await fetch(url)
-  const data = await res.json()
-  return data.results.US
-}
-
-async function getShowBackdropImage() {
-  const seasons = PARAMS.showType === 'tv' ? 'season/1/' : ''
-
-  const url = `https://api.themoviedb.org/3/${PARAMS.showType}/${PARAMS.id}/${seasons}images?api_key=${API_KEY}`
-
-  const imageUrl = 'https://image.tmdb.org/t/p/original'
-
-  const res = await fetch(url)
-  const data = await res.json()
-
-  if (data.backdrops) {
-    imageIndex = Math.floor(Math.random() * data.backdrops.length)
-    return `${imageUrl}${data.backdrops[imageIndex].file_path}`
-  }
-  return './images/defaultBackdrop.jpg'
 }
 
 displayShow()
