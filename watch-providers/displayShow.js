@@ -12,8 +12,7 @@ async function showTemplate() {
       <img id='backdropImage' src='${await getBackdropImage(PARAMS.showType, PARAMS.showId)}'/>
     </div>
     <img id='posterImage' src='${PARAMS.imageUrl}'/>
-    <h1 id='title'>${PARAMS.title}</h1>
-    <h2 id='release-year'>${PARAMS.releaseYear}</h2>
+    <h1 id='title'>${PARAMS.title}</br>${PARAMS.releaseYear}</h1>
   </div>
 
   <h2>Stream</h2>

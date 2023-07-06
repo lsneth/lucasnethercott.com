@@ -117,10 +117,12 @@ footer p {
   height: 500px;
   object-fit: cover;
   position: relative;
+  z-index: -1;
 }
 
 #backdropImageGradient {
   position: relative;
+  z-index: -1;
 }
 
 #backdropImageGradient::after {
@@ -145,16 +147,33 @@ footer p {
 
 #title {
   position: absolute;
-  bottom: -17%;
+  text-align: left;
+  top: 101%;
   left: calc(10% + 330px);
+  line-height: 1.5;
 }
 
-#release-year {
-  position: absolute;
-  bottom: -24%;
-  left: calc(10% + 330px);
+@media screen and (max-width: 850px) {
+  #posterImage {
+    position: static;
+    margin-top: -350px;
+  }
+
+  #title {
+    position: static;
+    margin: 15px 45px 45px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  #showHeader {
+    margin-bottom: 0;
+  }
 }
 
-#shows {
-  /* display:inline-block; */
+@media screen and (max-width: 480px) {
+  #title {
+    margin: 20px;
+    font-size: 25px;
+  }
 }
