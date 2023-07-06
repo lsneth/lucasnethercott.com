@@ -28,9 +28,8 @@ export default async function displayShows(showType, searchQuery) {
 
 function showTemplate(show, showType) {
   const image = `https://image.tmdb.org/t/p/w300${show.poster_path}`
-
   return `
-      <a href='show.html?showId=${show.id}&showType=${showType}&title=${show.name ?? show.original_title}&imageUrl=${image}' class='show'>
+      <a href='show.html?showId=${show.id}&showType=${showType}&title=${show.name ?? show.original_title}&releaseYear=${show.release_date.slice(0, 4)}&imageUrl=${image}' class='show'>
         <img src='${image}'/>
       </a>
     `

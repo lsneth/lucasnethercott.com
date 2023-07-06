@@ -52,27 +52,27 @@ footer {
   color: var(--gray);
 }
 
-footer p{
+footer p {
   position: absolute;
-  left:15px;
-  top:5px;
+  left: 15px;
+  top: 5px;
   font-size: 12px;
 }
 
 #tmdb-logo {
   position: absolute;
   top: 17px;
-  right:15px;
+  right: 15px;
   width: 100px;
 }
 
-#footer-logo{
+#footer-logo {
   position: absolute;
-  top:5px;
-  height:40px;
+  top: 5px;
+  height: 40px;
 }
 
-#footer-logo:hover{
+#footer-logo:hover {
   cursor: pointer;
 }
 
@@ -145,8 +145,14 @@ footer p{
 
 #title {
   position: absolute;
-  bottom: -20%;
-  left: calc(10% + 350px);
+  bottom: -17%;
+  left: calc(10% + 330px);
+}
+
+#release-year {
+  position: absolute;
+  bottom: -24%;
+  left: calc(10% + 330px);
 }
 
 #shows {
