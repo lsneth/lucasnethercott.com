@@ -142,7 +142,7 @@ footer p {
 
 #showHeader {
   position: relative;
-  margin-bottom: 250px;
+  margin-bottom: 200px;
 }
 
 #title {
@@ -151,6 +151,15 @@ footer p {
   top: 101%;
   left: calc(10% + 330px);
   line-height: 1.5;
+}
+
+#flatrate,
+#rent,
+#buy {
+  background-image: radial-gradient(circle, var(--purple), var(--black) 90%);
+  width: 90%;
+  margin: 30px auto;
+  padding: 20px;
 }
 
 @media screen and (max-width: 850px) {

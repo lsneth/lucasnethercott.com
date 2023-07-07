@@ -15,12 +15,15 @@ async function showTemplate() {
     <h1 id='title'>${PARAMS.title}</br>${PARAMS.releaseYear}</h1>
   </div>
 
-  <h2>Stream</h2>
-  <div id="flatrate"></div>
-  <h2>Rent</h2>
-  <div id="rent"></div>
-  <h2>Buy</h2>
-  <div id="buy"></div>
+  <div id="flatrate">
+    <h2>Stream</h2>
+  </div>
+  <div id="rent">
+    <h2>Rent</h2>
+  </div>
+  <div id="buy">
+    <h2>Buy</h2>
+  </div>
 
   <button onclick='location.href="index.html";' class="button">search again</button>
   `
