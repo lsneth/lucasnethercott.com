@@ -13,6 +13,7 @@ body {
   color: rgb(255, 255, 255);
   margin: 0;
   background-color: var(--black);
+  padding-bottom: 100px;
 }
 
 a {
@@ -78,7 +79,7 @@ footer p {
 
 #user-input {
   font-family: 'Poppins', sans-serif;
-  border: 2px solid black;
+  border: 2px solid var(--black);
   width: 300px;
   border-radius: 5px;
   padding: 10px;
@@ -112,7 +113,7 @@ footer p {
   line-height: 50px;
 }
 
-#backdropImage {
+.backdropImage {
   width: 100%;
   height: 500px;
   object-fit: cover;
@@ -120,12 +121,12 @@ footer p {
   z-index: -1;
 }
 
-#backdropImageGradient {
+.backdropImageGradient {
   position: relative;
   z-index: -1;
 }
 
-#backdropImageGradient::after {
+.backdropImageGradient::after {
   content: '';
   position: absolute;
   left: 0;
@@ -160,6 +161,22 @@ footer p {
   width: 90%;
   margin: 30px auto;
   padding: 20px;
+}
+
+#hero {
+  height: 300px;
+}
+
+#heroGradient::after {
+  height: 300px;
+}
+
+#heroText {
+  background-color: var(--purple);
+  width: 50%;
+  margin: -100px auto 15px;
+  padding: 20px;
+  filter: drop-shadow(0 0 10px var(--black));
 }
 
 @media screen and (max-width: 850px) {

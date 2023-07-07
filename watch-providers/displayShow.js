@@ -8,8 +8,8 @@ const PARAMS = new Proxy(new URLSearchParams(window.location.search), {
 async function showTemplate() {
   return `
   <div id='showHeader'>
-    <div id='backdropImageGradient'>
-      <img id='backdropImage' src='${await getBackdropImage(PARAMS.showType, PARAMS.showId)}'/>
+    <div class='backdropImageGradient'>
+      <img class='backdropImage' src='${await getBackdropImage(PARAMS.showType, PARAMS.showId)}'/>
     </div>
     <img id='posterImage' src='${PARAMS.imageUrl}'/>
     <h1 id='title'>${PARAMS.title}</br>${PARAMS.releaseYear}</h1>
@@ -51,7 +51,7 @@ async function displayProviders() {
       })
     } else {
       const noneEl = document.createElement('p')
-      noneEl.textContent = 'none'
+      noneEl.textContent = 'None'
       document.querySelector('#' + watchType).append(noneEl)
     }
   })

@@ -23,10 +23,14 @@
   </head>
   <body>
     <main>
-      <h1>Stream Scout</h1>
-      <h2>By Lucas Nethercott</h2>
-      <p id="instructions">Search any title to see where it is available to stream, rent, or buy!<br /></p>
-
+      <div class="backdropImageGradient" id="heroGradient">
+        <img class="backdropImage" src="./images/defaultBackdrop.jpg" id="hero" />
+      </div>
+      <div id="heroText">
+        <h1>Stream Scout</h1>
+        <h2>By Lucas Nethercott</h2>
+        <p id="instructions">Search any title to see where it is available to stream, rent, or buy!<br /></p>
+      </div>
       <form id="search-form">
         <div class="radio-button">
           <input type="radio" id="css" name="showType" value="tv" checked />
@@ -42,15 +46,6 @@
       </form>
 
       <p id="shows"></p>
-
-      <h1 id="streamTitle"></h1>
-      <p id="flatrate"></p>
-
-      <h1 id="rentTitle"></h1>
-      <p id="rent"></p>
-
-      <h1 id="buyTitle"></h1>
-      <p id="buy"></p>
     </main>
     <footer>
       <a href="https://developer.themoviedb.org/docs/getting-started">
