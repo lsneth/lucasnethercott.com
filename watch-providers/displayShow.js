@@ -51,7 +51,7 @@ async function displayProviders() {
       })
     } else {
       const noneEl = document.createElement('p')
-      noneEl.textContent = 'None'
+      noneEl.textContent = 'Not Available'
       document.querySelector('#' + watchType).append(noneEl)
     }
   })
