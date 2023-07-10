@@ -73,6 +73,7 @@ footer p {
   position: absolute;
   top: 5px;
   height: 40px;
+  margin-left: -20px;
 }
 
 #footer-logo:hover {
