@@ -25,7 +25,7 @@ async function showTemplate() {
     <h2>Buy</h2>
   </div>
 
-  <button onclick='location.href="index.html";' class="button">search again</button>
+  <button onclick='location.href="index.html";' class="button">Search Again</button>
   `
 }
 
