@@ -9,6 +9,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  font-size: 16px;
   text-align: center;
   color: rgb(255, 255, 255);
   margin: 0;
@@ -80,8 +81,13 @@ footer p {
   cursor: pointer;
 }
 
+input,
+button {
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
 #user-input {
-  font-family: 'Poppins', sans-serif;
   border: 2px solid var(--black);
   width: 300px;
   border-radius: 5px;
