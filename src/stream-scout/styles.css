@@ -1,0 +1,10 @@
+:root {
+  --blue: #16bfe1;
+  --purple: #ab96cc;
+  --black: #100f12;
+  --gray: #333333;
+}
+
+#stream-scout-root {
+  background-color: var(--black);
+}
