@@ -10,14 +10,12 @@ export default function NavBar() {
   ]
 
   return (
-    <nav className="">
-      <div className="grid grid-cols-2 m-5">
-        <div />
-        <div className="grid grid-cols-4">
-          {navItemProps.map((props) => (
-            <NavItem key={props.href} {...props} />
-          ))}
-        </div>
+    <nav className="flex justify-end m-5 text-right">
+      <div className="flex-1" />
+      <div className="flex-1">
+        {navItemProps.map((props) => (
+          <NavItem key={props.href} {...props} />
+        ))}
       </div>
     </nav>
   )
