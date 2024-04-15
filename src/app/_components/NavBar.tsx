@@ -1,5 +1,6 @@
 import React from 'react'
 import NavItem from './NavItem'
+import Image from 'next/image'
 
 export default function NavBar() {
   const navItemProps = [
@@ -11,7 +12,7 @@ export default function NavBar() {
 
   return (
     <nav className="flex justify-end m-5 text-right">
-      <div className="flex-1" />
+      <Image src="/logo.jpg" alt="lucasnethercott.com logo" width={32} height={32} className="flex-1 max-w-8 max-h-8" />
       <div className="flex-1">
         {navItemProps.map((props) => (
           <NavItem key={props.href} {...props} />
