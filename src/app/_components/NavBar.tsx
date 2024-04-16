@@ -16,13 +16,7 @@ export default function NavBar() {
   return (
     <nav className="flex justify-end items-center my-5 mx-8 text-right">
       <Link href="/">
-        <Image
-          src="/logo.png"
-          alt="lucasnethercott.com logo"
-          width={32}
-          height={32}
-          className="flex-1 max-w-8 max-h-8"
-        />
+        <Image src="/logo.png" alt="lucasnethercott.com logo" width={32} height={32} className="flex-1" />
       </Link>
       <div className="flex-1">
         {navItemProps.map((props) => (

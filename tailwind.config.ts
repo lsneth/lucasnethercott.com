@@ -5,8 +5,9 @@ const config: Config = {
   theme: {
     colors: {
       white: '#ffffff',
-      black: '#020617',
-      primary: '#0D9488',
+      black: '#020716',
+      gray: '#0f162b',
+      primary: '#0c9489',
     },
   },
   plugins: [],
