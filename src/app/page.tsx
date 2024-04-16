@@ -1,10 +1,16 @@
 import React from 'react'
+import Spacer from './_components/Spacer'
+import Text from './_components/Text'
 
 export default function Home() {
   return (
-    <main className="mx-5">
-      <p>lucasnethercott.com</p>
-      <button className="bg-primary py-1.5 px-4 rounded-md">test</button>
+    <main className="mx-5 text-center">
+      <Text>Hi, my name is</Text>
+      <Spacer size={5} />
+      <Text size="lg">Luke Nethercott</Text>
+      <Spacer size={5} />
+      <Text color="primary">Learning. Thinking. Coding.</Text>
+      <Spacer size={15} />
     </main>
   )
 }

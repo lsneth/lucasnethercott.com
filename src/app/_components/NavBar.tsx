@@ -1,5 +1,7 @@
+'use client'
+
 import React from 'react'
-import NavItem from './NavItem'
+import { usePathname } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -28,5 +30,17 @@ export default function NavBar() {
         ))}
       </div>
     </nav>
+  )
+}
+
+function NavItem({ href, text }: { href: string; text: string }) {
+  const isCurrentPage = usePathname() === href
+  let linkStyle = 'ml-10'
+  if (isCurrentPage) linkStyle += ' text-primary'
+
+  return (
+    <Link href={href} className={linkStyle}>
+      {text}
+    </Link>
   )
 }
