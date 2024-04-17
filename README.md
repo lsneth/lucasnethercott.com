@@ -1,2 +1,3 @@
 # lucasnethercott.com
-This is my personal website that I'll eventually make into a portfolio. For now I just use it to host some in progress projects.
+
+This is a portfolio site of my biggest current and past projects. Most of them, but not all, are software development related.
