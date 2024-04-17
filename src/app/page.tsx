@@ -38,7 +38,7 @@ export default function Home() {
         pathToImage="/stream-scout-logo.png"
         description="A solution for quickly finding where a movie or TV show is currently available to stream, rent, or buy. Stream Scout leverages TMDB's API to provide a simple cinema search experience."
         imageAltText="stream scout logo"
-        deployedLink="https://lucasnethercott.com/stream-scout"
+        deployedLink="https://streamscout.lucasnethercott.com"
       />
     </main>
   )
