@@ -19,8 +19,14 @@ export default function ProjectSection({
   deployedLink?: string
 }) {
   return (
-    <section className="flex items-center even:bg-gray p-5">
-      <Image src={pathToImage} width={256} height={256} alt={imageAltText} className="max-h-256 max-w-256 mr-5" />
+    <section className="flex items-center even:bg-gray p-5 rounded-xl my-5">
+      <Image
+        src={pathToImage}
+        width={256}
+        height={256}
+        alt={imageAltText}
+        className="max-h-256 max-w-256 mr-7 rounded-xl"
+      />
       <div>
         <Text size="md">{title}</Text>
         <Spacer size={5} />

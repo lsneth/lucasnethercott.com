@@ -4,6 +4,7 @@ import React from 'react'
 import { usePathname } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
+import Text from './_components/Text'
 
 export default function NavBar() {
   const navItemProps = [
@@ -14,9 +15,14 @@ export default function NavBar() {
   ]
 
   return (
-    <nav className="flex justify-end items-center my-5 mx-8 text-right">
+    <nav className="flex justify-end items-center text-right my-10">
       <Link href="/">
-        <Image src="/logo.png" alt="lucasnethercott.com logo" width={32} height={32} className="flex-1" />
+        <div className="bg-gray py-1 px-3.5 rounded-full">
+          <Text color="primary" size="md">
+            L
+          </Text>
+        </div>
+        {/* <Image src="/logo.png" alt="lucasnethercott.com logo" width={32} height={32} className="flex-1" /> */}
       </Link>
       <div className="flex-1">
         {navItemProps.map((props) => (
