@@ -1,8 +1,8 @@
 import React from 'react'
 import { Size } from '../_types/types'
 
-export default function Spacer({ size }: { size: Size }) {
-  const stylesMap = {
+export default function Spacer({ size, className = '' }: { size: Size; className?: string }) {
+  const sizeStyle = {
     0: 'my-0',
     0.5: 'my-0.5',
     1: 'my-1',
@@ -39,5 +39,5 @@ export default function Spacer({ size }: { size: Size }) {
     96: 'my-96',
   }
 
-  return <div className={stylesMap[size]} />
+  return <div className={`${sizeStyle[size]} ${className}`} />
 }

@@ -12,7 +12,7 @@ export default function NavBar() {
   ]
 
   return (
-    <nav className="flex justify-end items-center text-right my-5 pb-5 border-b-2 border-gray">
+    <nav className="flex justify-end items-center text-right my-5 pb-5">
       <Link href="/">
         <div className="bg-gray py-1 px-3.5 rounded-full">
           <Text size="md">L</Text>

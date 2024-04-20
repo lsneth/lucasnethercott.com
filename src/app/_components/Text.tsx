@@ -16,5 +16,5 @@ export default function Text({
     xl: 'max-sm:text-5xl sm: text-7xl',
   }
 
-  return <p className={`${sizeStyle[size]} ${className}`}>{children}</p>
+  return <p className={`max-w-3xl ${sizeStyle[size]} ${className}`}>{children}</p>
 }
