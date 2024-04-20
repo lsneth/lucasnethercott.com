@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Text from './_components/Text'
+import Image from 'next/image'
 
 export default function NavBar() {
   const navItemProps = [
@@ -11,9 +12,7 @@ export default function NavBar() {
   return (
     <nav className="flex items-center justify-between text-right my-5 pb-5">
       <Link href="/" className="">
-        <div className="bg-gray py-1 px-3.5 rounded-full">
-          <Text size="md">L</Text>
-        </div>
+        <Image src="/logo.png" alt="lucasnethercott.com logo" height={40} width={40} />
       </Link>
       <div className="flex items-center">
         <a href="mailto:luke+portfolio@nethercott.com" className="ml-5">

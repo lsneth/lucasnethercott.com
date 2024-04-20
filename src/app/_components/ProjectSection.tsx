@@ -25,7 +25,7 @@ export default function ProjectSection({
         width={256}
         height={256}
         alt={imageAltText}
-        className="max-h-256 max-w-256 max-sm:rounded-t-xl sm:rounded-l-xl max-sm:w-full object-cover"
+        className="max-sm:rounded-t-xl sm:rounded-l-xl max-sm:w-full object-cover"
       />
       <div className="p-5">
         <Text size="md">{title}</Text>
