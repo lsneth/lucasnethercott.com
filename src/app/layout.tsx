@@ -1,10 +1,14 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Ubuntu } from 'next/font/google'
 import './globals.css'
 import NavBar from './NavBar'
 import Footer from './Footer'
 
-const inter = Inter({ subsets: ['latin'] })
+const ubuntu = Ubuntu({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-ubuntu',
+})
 
 export const metadata: Metadata = {
   title: 'lucasnethercott.com',
@@ -18,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-black text-white font-mono max-w-screen-xl m-auto">
+      <body className={`${ubuntu.variable} bg-black text-white font-sans max-w-6xl m-auto px-5`}>
         <header>
           <NavBar />
         </header>

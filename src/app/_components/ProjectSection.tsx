@@ -19,23 +19,23 @@ export default function ProjectSection({
   deployedLink?: string
 }) {
   return (
-    <section className="flex items-center even:bg-gray p-5 rounded-xl my-5">
+    <section className="sm:flex bg-gray rounded-xl my-7 break-words">
       <Image
         src={pathToImage}
         width={256}
         height={256}
         alt={imageAltText}
-        className="max-h-256 max-w-256 mr-7 rounded-xl"
+        className="max-h-256 max-w-256 max-sm:rounded-t-xl sm:rounded-l-xl max-sm:w-full object-cover"
       />
-      <div>
+      <div className="p-5">
         <Text size="md">{title}</Text>
         <Spacer size={5} />
         <Text>{description}</Text>
         <Spacer size={5} />
         {deployedLink && (
           <Text>
-            Try it out:{' '}
-            <a href={deployedLink} className="text-primary">
+            Deploy:{' '}
+            <a href={deployedLink} className="text-accent1">
               {' '}
               {deployedLink}{' '}
             </a>
@@ -43,8 +43,8 @@ export default function ProjectSection({
         )}
         {codeLink && (
           <Text>
-            Code Link:{' '}
-            <a href={codeLink} className="text-primary">
+            Code:{' '}
+            <a href={codeLink} className="text-accent1">
               {' '}
               {codeLink}{' '}
             </a>
