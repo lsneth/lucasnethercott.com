@@ -1,7 +1,7 @@
-import Image from 'next/image'
-import React from 'react'
-import Text from './Text'
-import Spacer from './Spacer'
+import Image from "next/image";
+import React from "react";
+import Text from "./Text";
+import Spacer from "./Spacer";
 
 export default function ProjectSection({
   title,
@@ -11,21 +11,21 @@ export default function ProjectSection({
   codeLink,
   deployedLink,
 }: {
-  title: string
-  pathToImage: string
-  imageAltText: string
-  description: string | JSX.Element
-  codeLink?: string
-  deployedLink?: string
+  title: string;
+  pathToImage: string;
+  imageAltText: string;
+  description: string | JSX.Element;
+  codeLink?: string;
+  deployedLink?: string;
 }) {
   return (
-    <section className="sm:flex bg-gray rounded-xl my-7 break-words">
+    <section className="my-7 break-words rounded-xl bg-gray sm:flex">
       <Image
         src={pathToImage}
         width={256}
         height={256}
         alt={imageAltText}
-        className="max-sm:rounded-t-xl sm:rounded-l-xl max-sm:w-full object-cover"
+        className="object-cover max-sm:w-full max-sm:rounded-t-xl sm:rounded-l-xl"
       />
       <div className="p-5">
         <Text size="md">{title}</Text>
@@ -34,23 +34,23 @@ export default function ProjectSection({
         <Spacer size={5} />
         {deployedLink && (
           <Text>
-            Deploy:{' '}
+            Deploy:{" "}
             <a href={deployedLink} className="text-accent1">
-              {' '}
-              {deployedLink}{' '}
+              {" "}
+              {deployedLink}{" "}
             </a>
           </Text>
         )}
         {codeLink && (
           <Text>
-            Code:{' '}
+            Code:{" "}
             <a href={codeLink} className="text-accent1">
-              {' '}
-              {codeLink}{' '}
+              {" "}
+              {codeLink}{" "}
             </a>
           </Text>
         )}
       </div>
     </section>
-  )
+  );
 }

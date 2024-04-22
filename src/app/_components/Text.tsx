@@ -1,20 +1,22 @@
-import React from 'react'
+import React from "react";
 
 export default function Text({
   children,
   className,
-  size = 'sm',
+  size = "sm",
 }: {
-  children: React.ReactNode
-  className?: string
-  size?: 'sm' | 'md' | 'lg' | 'xl'
+  children: React.ReactNode;
+  className?: string;
+  size?: "sm" | "md" | "lg" | "xl";
 }) {
   const sizeStyle = {
-    sm: 'text-base',
-    md: 'text-2xl',
-    lg: 'text-4xl',
-    xl: 'max-sm:text-5xl sm: text-7xl',
-  }
+    sm: "text-base",
+    md: "text-2xl",
+    lg: "text-4xl",
+    xl: "max-sm:text-5xl sm: text-7xl",
+  };
 
-  return <p className={`max-w-3xl ${sizeStyle[size]} ${className}`}>{children}</p>
+  return (
+    <p className={`max-w-3xl ${sizeStyle[size]} ${className}`}>{children}</p>
+  );
 }

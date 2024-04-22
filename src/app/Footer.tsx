@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
-export default function Footer({ className = '' }: { className?: string }) {
+export default function Footer({ className = "" }: { className?: string }) {
   return (
-    <footer className="text-center p-10 ${className}">
+    <footer className="${className} p-10 text-center">
       <p>©2024 Lucas Nethercott</p>
     </footer>
-  )
+  );
 }
