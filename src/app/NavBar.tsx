@@ -1,21 +1,16 @@
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
+import React from "react"
+import Link from "next/link"
+import Image from "next/image"
 
 export default function NavBar() {
-  const navItemProps = [
-    { href: "/", text: "Home" },
-    { href: "/contact", text: "Contact" },
-  ];
-
   return (
     <nav className="my-5 flex items-center justify-between pb-5 text-right">
       <Link href="/" className="">
         <Image
           src="/logo.png"
           alt="lucasnethercott.com logo"
-          height={40}
-          width={40}
+          height={30}
+          width={30}
         />
       </Link>
       <div className="flex items-center">
@@ -49,5 +44,5 @@ export default function NavBar() {
         </a>
       </div>
     </nav>
-  );
+  )
 }

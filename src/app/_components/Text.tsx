@@ -7,9 +7,10 @@ export default function Text({
 }: {
   children: React.ReactNode;
   className?: string;
-  size?: "sm" | "md" | "lg" | "xl";
+  size?: "xs" | "sm" | "md" | "lg" | "xl";
 }) {
   const sizeStyle = {
+    xs: "text-sm",
     sm: "text-base",
     md: "text-2xl",
     lg: "text-4xl",

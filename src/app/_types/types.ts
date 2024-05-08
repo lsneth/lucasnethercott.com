@@ -32,3 +32,16 @@ export type Size =
   | 72
   | 80
   | 96
+
+export type Skill =
+  | "TypeScript"
+  | "React"
+  | "React Native"
+  | "Supabase"
+  | "AWS Lambda Functions"
+  | "Webhooks"
+  | "Liquid"
+  | "Shopify"
+  | "Next.js"
+  | "TailwindCSS"
+  | "WebSockets"
