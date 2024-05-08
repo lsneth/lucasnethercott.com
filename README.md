@@ -1,3 +1,9 @@
-# lucasnethercott.com
+# [lucasnethercott.com](https://www.lucasnethercott.com/)
 
-This is a portfolio site of my biggest current and past projects. Most of them, but not all, are software development related.
+## Description
+
+This is a design and development portfolio site created to display my biggest current and past projects. View deploy at [https://www.lucasnethercott.com/](https://www.lucasnethercott.com/).
+
+## Stack
+
+Frontend built with TypeScript, React, and Next.js. Styled with TailWindCSS. As of yet, this project doesn't need a backend.
