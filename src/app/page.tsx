@@ -64,7 +64,7 @@ export default function Home() {
       </Text>
       <div className="max-sm:my-2 sm:my-5" />
       <Text className="m-auto text-accent1 sm:text-center">
-        Junior Software Developer
+        Software Developer
       </Text>
       <div className="m-auto max-sm:my-10 sm:my-14" />
       <Text className="m-auto sm:text-center">
