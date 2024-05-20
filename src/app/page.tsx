@@ -74,7 +74,7 @@ export default function Home() {
         I&apos;m a passionate frontend developer with {yearsExperience} years of
         professional experience. My current focus is on expanding my knowledge
         and skill set through practice with TypeScript, React Native, Next.js,
-        and tailwindcss. Check out what I&apos;ve been working on below!
+        and TailwindCSS. Check out what I&apos;ve been working on below!
       </Text>
       <div className="max-sm:my-20 sm:my-32" />
 
