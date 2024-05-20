@@ -3,8 +3,11 @@ import Text from "./_components/Text"
 import ProjectSection from "./_components/ProjectSection"
 
 export default function Home() {
-  const yearsExperience =
-    new Date().getFullYear() - new Date(1673276400000).getFullYear() // Jan 9, 2023 at 8am. When I started my internship with FamilySearch.
+  const yearsExperience = (
+    (new Date().getTime() - new Date(1673276400000).getTime()) / // Jan 9, 2023 at 8am. When I started my internship with FamilySearch.
+    // milliseconds in a year
+    31556952000
+  ).toFixed(1)
 
   const projects: React.ComponentProps<typeof ProjectSection>[] = [
     {
@@ -68,11 +71,10 @@ export default function Home() {
       </Text>
       <div className="m-auto max-sm:my-10 sm:my-14" />
       <Text className="m-auto sm:text-center">
-        I&apos;m a passionate frontend developer with {yearsExperience}+ years
-        of experience working in React. My current focus is on expanding my
-        knowledge and skill set through practice with TypeScript, React Native,
-        Next.js, and tailwindcss. Check out what I&apos;ve been working on
-        below!
+        I&apos;m a passionate frontend developer with {yearsExperience} years of
+        professional experience. My current focus is on expanding my knowledge
+        and skill set through practice with TypeScript, React Native, Next.js,
+        and tailwindcss. Check out what I&apos;ve been working on below!
       </Text>
       <div className="max-sm:my-20 sm:my-32" />
 
