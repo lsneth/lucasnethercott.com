@@ -45,3 +45,4 @@ export type Skill =
   | "Next.js"
   | "TailwindCSS"
   | "WebSockets"
+  | "Cypress Testing"

@@ -18,7 +18,7 @@ export default function Home() {
       skills: ["TypeScript", "React", "Next.js", "TailwindCSS"],
     },
     {
-      title: "Stream Scout (In Progress)",
+      title: "Stream Scout",
       pathToImage: "/stream-scout-logo.png",
       description:
         "A solution for quickly finding where a movie or TV show is currently available to stream, rent, or buy. Stream Scout leverages TMDB's API to provide a simple cinema search experience.",
@@ -31,6 +31,7 @@ export default function Home() {
         "Next.js",
         "TailwindCSS",
         "AWS Lambda Functions",
+        "Cypress Testing",
       ],
     },
     {
