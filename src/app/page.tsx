@@ -21,6 +21,24 @@ export default function Home() {
       skills: ["TypeScript", "React", "Next.js", "TailwindCSS"],
     },
     {
+      title: "Mafia: Social Deduction (In Progress)",
+      pathToImage: "/mafia.png",
+      description:
+        "The social deduction genre at it's finest. No moderator. No cards. No trivial noises at night. Just you, your friends, and pure social deduction. This mobile app will be a building block for a series of social deduction apps to come.",
+      imageAltText: "mafia: social deduction cover image",
+      codeLink: "https://github.com/lsneth/mafia-social-deduction",
+      skills: [
+        "TypeScript",
+        "Expo",
+        "React Native",
+        "NativeWind",
+        "TailwindCSS",
+        "Cypress Testing",
+        "Supabase",
+        "WebSockets",
+      ],
+    },
+    {
       title: "Stream Scout",
       pathToImage: "/stream-scout-logo.png",
       description:
@@ -36,15 +54,6 @@ export default function Home() {
         "AWS Lambda Functions",
         "Cypress Testing",
       ],
-    },
-    {
-      title: "Mafia: Social Deduction (In Progress)",
-      pathToImage: "/mafia.png",
-      description:
-        "The social deduction genre at it's finest. No moderator. No cards. No trivial noises at night. Just you, your friends, and pure social deduction. This mobile app will be a building block for a series of social deduction apps to come.",
-      imageAltText: "mafia: social deduction cover image",
-      codeLink: "https://github.com/lsneth/mafia-social-deduction",
-      skills: ["TypeScript", "React Native", "Supabase", "WebSockets"],
     },
     {
       title: "Sold Out (In Progress)",
