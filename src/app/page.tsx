@@ -11,16 +11,6 @@ export default function Home() {
 
   const projects: React.ComponentProps<typeof ProjectSection>[] = [
     {
-      title: "lucasnethercott.com",
-      pathToImage: "/logo.png",
-      description:
-        "You're looking at it! I built this site to be my design and development portfolio.",
-      imageAltText: "mafia: social deduction cover image",
-      codeLink: "https://github.com/lsneth/lucasnethercott.com",
-      deployedLink: "https://www.lucasnethercott.com",
-      skills: ["TypeScript", "React", "Next.js", "TailwindCSS"],
-    },
-    {
       title: "Mafia: Social Deduction (In Progress)",
       pathToImage: "/mafia.png",
       description:
@@ -54,6 +44,16 @@ export default function Home() {
         "AWS Lambda Functions",
         "Cypress Testing",
       ],
+    },
+    {
+      title: "lucasnethercott.com",
+      pathToImage: "/logo.png",
+      description:
+        "You're looking at it! I built this site to be my design and development portfolio.",
+      imageAltText: "mafia: social deduction cover image",
+      codeLink: "https://github.com/lsneth/lucasnethercott.com",
+      deployedLink: "https://www.lucasnethercott.com",
+      skills: ["TypeScript", "React", "Next.js", "TailwindCSS"],
     },
     {
       title: "Sold Out (In Progress)",
