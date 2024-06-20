@@ -25,6 +25,7 @@ export default function Home() {
         "TailwindCSS",
         "Cypress Testing",
         "Supabase",
+        "Supabase Edge Functions",
         "WebSockets",
       ],
     },
