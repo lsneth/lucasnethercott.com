@@ -47,5 +47,6 @@ export type Skill =
   | "Next.js"
   | "TailwindCSS"
   | "NativeWind"
-  | "Cypress Testing"
+  | "Cypress e2e"
   | "Expo"
+  | "Docker"

@@ -23,10 +23,11 @@ export default function Home() {
         "React Native",
         "NativeWind",
         "TailwindCSS",
-        "Cypress Testing",
+        "Cypress e2e",
         "Supabase",
         "Supabase Edge Functions",
         "WebSockets",
+        "Docker",
       ],
     },
     {
@@ -43,7 +44,7 @@ export default function Home() {
         "Next.js",
         "TailwindCSS",
         "AWS Lambda Functions",
-        "Cypress Testing",
+        "Cypress e2e",
       ],
     },
     {
