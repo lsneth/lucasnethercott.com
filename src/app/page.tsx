@@ -11,6 +11,16 @@ export default function Home() {
 
   const projects: React.ComponentProps<typeof ProjectSection>[] = [
     {
+      title: "jellybean",
+      pathToImage: "/jellybean.png",
+      description:
+        "A straightforward web application capable of performing CRUD operations on jelly bean flavors. To name a few of its strengths, it includes a secure database, user authentication, loading state, and responsive design.",
+      imageAltText: "mafia: social deduction cover image",
+      deployedLink: "https://jellybean.lucasnethercott.com",
+      codeLink: "https://github.com/lsneth/jellybean",
+      skills: ["TypeScript", "React", "tailwindCSS", "supabase", "netlify"],
+    },
+    {
       title: "Mafia: Social Deduction (In Progress)",
       pathToImage: "/mafia.png",
       description:
@@ -22,10 +32,10 @@ export default function Home() {
         "Expo",
         "React Native",
         "NativeWind",
-        "TailwindCSS",
+        "tailwindCSS",
         "Cypress e2e",
-        "Supabase",
-        "Supabase Edge Functions",
+        "supabase",
+        "supabase Edge Functions",
         "WebSockets",
         "Docker",
       ],
@@ -42,7 +52,7 @@ export default function Home() {
         "TypeScript",
         "React",
         "Next.js",
-        "TailwindCSS",
+        "tailwindCSS",
         "AWS Lambda Functions",
         "Cypress e2e",
       ],
@@ -55,15 +65,14 @@ export default function Home() {
       imageAltText: "mafia: social deduction cover image",
       codeLink: "https://github.com/lsneth/lucasnethercott.com",
       deployedLink: "https://www.lucasnethercott.com",
-      skills: ["TypeScript", "React", "Next.js", "TailwindCSS"],
+      skills: ["TypeScript", "React", "Next.js", "tailwindCSS"],
     },
     {
-      title: "Sold Out (In Progress)",
+      title: "Sold Out (Abandoned)",
       pathToImage: "/sold-out.png",
       description:
         "A tshirt company that only sells each design one time. Once it's sold, it's sold out. This is made possible through many modern technologies including recent developments in AI art generation.",
       imageAltText: "mafia: social deduction cover image",
-      deployedLink: "https://soldout.limited/",
       skills: ["Shopify", "AWS Lambda Functions", "Webhooks", "Liquid"],
     },
   ]
