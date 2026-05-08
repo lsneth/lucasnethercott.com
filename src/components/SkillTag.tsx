@@ -1,6 +1,6 @@
 import React from "react"
-import Text from "./Text"
-import { Skill } from "../_types/types"
+import Text from "@/components/Text"
+import { Skill } from "@/types"
 
 export default function SkillTag({ skill }: { skill: Skill }) {
   return (

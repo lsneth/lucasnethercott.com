@@ -1,9 +1,9 @@
 import Image from "next/image"
 import React from "react"
-import Text from "./Text"
-import Spacer from "./Spacer"
-import SkillTag from "./SkillTag"
-import { Skill } from "../_types/types"
+import Text from "@/components/Text"
+import Spacer from "@/components/Spacer"
+import SkillTag from "@/components/SkillTag"
+import { Skill } from "@/types"
 
 export default function ProjectSection({
   title,
@@ -17,7 +17,7 @@ export default function ProjectSection({
   title: string
   pathToImage: string
   imageAltText: string
-  description: string | JSX.Element
+  description: string | React.ReactNode
   codeLink?: string
   deployedLink?: string
   skills: Skill[]

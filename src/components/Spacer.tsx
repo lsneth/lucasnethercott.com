@@ -1,5 +1,5 @@
 import React from "react";
-import { Size } from "../_types/types";
+import { Size } from "@/types";
 
 export default function Spacer({
   size,

@@ -1,3 +1,5 @@
+import React from "react"
+
 export type Size =
   | 0.5
   | 1
@@ -51,3 +53,13 @@ export type Skill =
   | "Expo"
   | "Docker"
   | "netlify"
+
+export interface Project {
+  title: string
+  pathToImage: string
+  imageAltText: string
+  description: string | React.ReactNode
+  codeLink?: string
+  deployedLink?: string
+  skills: Skill[]
+}
