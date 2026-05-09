@@ -6,7 +6,7 @@ import Footer from "@/components/Footer"
 
 const ubuntu = Ubuntu({
   subsets: ["latin"],
-  weight: "400",
+  weight: ["300", "400", "500", "700"],
   variable: "--font-ubuntu",
 })
 

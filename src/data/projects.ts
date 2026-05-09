@@ -49,17 +49,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    title: "lucasnethercott.com",
-    pathToImage: "/logo.png",
-    description:
-      "You're looking at it! I built this site to be my design and development portfolio.",
-    imageAltText: "mafia: social deduction cover image",
-    codeLink: "https://github.com/lsneth/lucasnethercott.com",
-    deployedLink: "https://www.lucasnethercott.com",
-    skills: ["TypeScript", "React", "Next.js", "tailwindCSS"],
-  },
-  {
-    title: "Sold Out (Abandoned)",
+    title: "Sold Out",
     pathToImage: "/sold-out.png",
     description:
       "A tshirt company that only sells each design one time. Once it's sold, it's sold out. This is made possible through many modern technologies including recent developments in AI art generation.",

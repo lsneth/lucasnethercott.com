@@ -53,6 +53,25 @@ export type Skill =
   | "Expo"
   | "Docker"
   | "netlify"
+  | "PowerApps"
+  | "SharePoint"
+  | "Linux"
+  | "Shell Scripting"
+  | "JavaScript"
+  | "Agile"
+  | "GitHub"
+  | "Unit Testing"
+  | "Web Design"
+  | "Marketing"
+  | "E-commerce"
+  | "Python"
+  | "FastAPI"
+  | "OpenAI Codex"
+  | "MCP"
+  | "Agentic Workflows"
+  | "GC MarketDirect StoreFront"
+  | "GC Pace"
+  | "playwright-cli"
 
 export interface Project {
   title: string
@@ -61,5 +80,14 @@ export interface Project {
   description: string | React.ReactNode
   codeLink?: string
   deployedLink?: string
+  skills: Skill[]
+}
+
+export interface Role {
+  company: string
+  title: string
+  location: string
+  dateRange: string
+  description: string[]
   skills: Skill[]
 }

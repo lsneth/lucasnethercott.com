@@ -1,0 +1,78 @@
+import { Role } from "@/types"
+
+export const roles: Role[] = [
+  {
+    company: "Brigham Young University",
+    title: "Print Application Developer II",
+    location: "Provo, UT",
+    dateRange: "July 2025 - Current",
+    description: [
+      "Chaired a cross-divisional AI task force to identify high-impact AI projects",
+      "Represented my own division in enterprise-level working groups to align AI strategy across the organization",
+      // "Developed and deployed AI projects, agents, custom MCP servers, and other AI tooling to streamline internal workflows",
+      "Managed and mentored 5-10 student employees at a time",
+      "Pioneered the use of AI coding agents as a software development tool, establishing best practices and guidelines for their effective and responsible use within the division",
+      "Diagnosed and remediated technical inconsistencies and software anti-patterns to ensure high-quality, maintainable architecture",
+      "Automated complex browser-based workflows with playwright-cli and OpenAI Codex",
+      "Managed and maintained 30+ eCommerce storefronts using Graphic Communications' MarketDirect StoreFront and Pace, striving for seamless print-on-demand operations",
+    ],
+    skills: [
+      "Python",
+      "FastAPI",
+      "OpenAI Codex",
+      "MCP",
+      "Agentic Workflows",
+      "GC MarketDirect StoreFront",
+      "GC Pace",
+      "playwright-cli",
+    ],
+  },
+  {
+    company: "U.S. Department of the Treasury",
+    title: "I.T. Specialist",
+    location: "SLC, UT",
+    dateRange: "Sep 2024 - March 2025",
+    description: [
+      "Maintained high availability for technical needs and proactively sought assignments",
+      "Dedicated downtime to personal projects, focusing on web development skills",
+      "Acquired perspective on government employment, ultimately pivoting to the private sector to pursue a more engaging job opportunity",
+    ],
+    skills: [],
+  },
+  {
+    company: "FamilySearch",
+    title: "Student Engineer",
+    location: "Lehi, UT",
+    dateRange: "Jan 2023 - May 2024",
+    description: [
+      "Collaborated with front-end devs, back-end devs, product management, and UX teams",
+      "Participated in team communication and engineering improvement discussions",
+      "Tracked and improved personal work velocity using Agile/Scrum methodologies",
+      "Developed and maintained client-side JavaScript and TypeScript React applications",
+      "Wrote unit tests, built feature demos, and created comprehensive documentation",
+      "Managed version control with over 900 GitHub contributions and active PR reviews",
+    ],
+    skills: [
+      "TypeScript",
+      "React",
+      "JavaScript",
+      "Agile",
+      "GitHub",
+      "Unit Testing",
+      "tailwindCSS",
+    ],
+  },
+  {
+    company: "Real Hero Studios",
+    title: "Web Developer, Marketer",
+    location: "Logan, UT",
+    dateRange: "Apr 2020 - Dec 2022",
+    description: [
+      "Designed, developed, and maintained a Shopify e-commerce website",
+      "Provided daily customer support regarding technology and order concerns",
+      "Fulfilled online store orders and managed inventory workflows",
+      "Created and managed successful Facebook and email marketing campaigns",
+    ],
+    skills: ["Shopify", "Web Design", "Marketing", "E-commerce"],
+  },
+]

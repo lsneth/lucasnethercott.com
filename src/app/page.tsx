@@ -1,45 +1,88 @@
-import React from "react"
+"use client"
+
+import React, { useState } from "react"
 import Text from "@/components/Text"
 import ProjectSection from "@/components/ProjectSection"
+import RoleSection from "@/components/RoleSection"
 import { projects } from "@/data/projects"
+import { roles } from "@/data/roles"
 import { calculateYearsExperience } from "@/lib/utils"
 
 export default function Home() {
   const yearsExperience = calculateYearsExperience()
+  const [activeTab, setActiveTab] = useState<"projects" | "roles">("projects")
 
   return (
-    <main>
-      <div className="max-sm:hidden sm:my-20" />
-      <Text className="m-auto sm:text-center">Hi, my name is</Text>
-      <div className="max-sm:my-1 sm:my-2" />
-      <Text size="xl" className="m-auto max-sm:-ml-0.5 sm:text-center">
-        Luke Nethercott
+    <main className="pb-20">
+      <div className="max-sm:my-10 sm:my-32" />
+      <div className="flex flex-col gap-4">
+        <Text weight="medium" className="text-accent1 tracking-wide uppercase text-sm md:text-base">
+          Hi, my name is
+        </Text>
+        <Text size="xl" weight="bold" as="h1" className="bg-gradient-to-r from-white via-white to-accent1 bg-clip-text text-transparent leading-[1.1]">
+          Luke Nethercott
+        </Text>
+        <Text size="lg" weight="medium" className="text-white/60">
+          {/* Technophile. Tinkerer. Early adopter. Productivity nerd. Self-hoster. AI Pragmatist. Software Engineer. Home-labber. */}
+          Technophile. AI Pragmatist. Software Engineer.
+        </Text>
+      </div>
+      
+      <div className="max-sm:my-10 sm:my-16" />
+      
+      <Text size="sm" weight="normal" className="max-w-2xl text-white/80">
+        I'm passionate about technology and I love to build solutions. Check out some of my experience below.
       </Text>
-      <div className="max-sm:my-2 sm:my-5" />
-      <Text className="m-auto text-accent1 sm:text-center">
-        Software Developer
-      </Text>
-      <div className="m-auto max-sm:my-10 sm:my-14" />
-      <Text className="m-auto sm:text-center">
-        I&apos;m a passionate frontend developer with {yearsExperience} years of
-        professional experience. My current focus is on expanding my knowledge
-        and skill set through practice with TypeScript, React Native, Next.js,
-        and TailwindCSS. Check out what I&apos;ve been working on below!
-      </Text>
-      <div className="max-sm:my-20 sm:my-32" />
+      
+      <div className="max-sm:my-20 sm:my-40" />
+      
+      <div className="flex flex-col gap-8">
+        <div className="flex border-b border-white/10 w-full">
+          <button
+            onClick={() => setActiveTab("projects")}
+            className={`pb-4 px-4 text-sm md:text-base font-bold transition-all duration-300 border-b-2 -mb-[1px] ${
+              activeTab === "projects"
+                ? "text-white border-accent1"
+                : "text-white/40 border-transparent hover:text-white/60"
+            }`}
+          >
+            Projects
+          </button>
+          <button
+            onClick={() => setActiveTab("roles")}
+            className={`pb-4 px-4 text-sm md:text-base font-bold transition-all duration-300 border-b-2 -mb-[1px] ${
+              activeTab === "roles"
+                ? "text-white border-accent1"
+                : "text-white/40 border-transparent hover:text-white/60"
+            }`}
+          >
+            Roles
+          </button>
+        </div>
 
-      {projects.map((project) => (
-        <ProjectSection
-          key={project.title}
-          title={project.title}
-          pathToImage={project.pathToImage}
-          imageAltText={project.imageAltText}
-          description={project.description}
-          codeLink={project.codeLink}
-          deployedLink={project.deployedLink}
-          skills={project.skills}
-        />
-      ))}
+        {activeTab === "projects" ? (
+          <div className="grid gap-8">
+            {projects.map((project) => (
+              <ProjectSection
+                key={project.title}
+                title={project.title}
+                pathToImage={project.pathToImage}
+                imageAltText={project.imageAltText}
+                description={project.description}
+                codeLink={project.codeLink}
+                deployedLink={project.deployedLink}
+                skills={project.skills}
+              />
+            ))}
+          </div>
+        ) : (
+          <div className="grid gap-8">
+            {roles.map((role, index) => (
+              <RoleSection key={index} role={role} />
+            ))}
+          </div>
+        )}
+      </div>
     </main>
   )
 }

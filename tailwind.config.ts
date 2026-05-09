@@ -13,9 +13,21 @@ const config: Config = {
         // https://coolors.co/002b36-014053-229c94-d23683-d4d4d4
         white: "#D4D4D4",
         black: "#002B36",
-        gray: "#014053",
+        gray: {
+          DEFAULT: "#014053",
+          50: "rgba(1, 64, 83, 0.5)",
+        },
         accent1: "#229C94",
         accent2: "#D23683",
+      },
+      animation: {
+        'glow': 'glow 2s ease-in-out infinite alternate',
+      },
+      keyframes: {
+        glow: {
+          '0%': { boxShadow: '0 0 5px rgba(34, 156, 148, 0.2)' },
+          '100%': { boxShadow: '0 0 20px rgba(34, 156, 148, 0.6)' },
+        }
       },
       fontFamily: {
         // add the css variable and include fallback fonts from tailwind default theme
