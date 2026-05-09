@@ -16,7 +16,7 @@ export default function NavBar() {
       </Link>
       <div className="flex items-center gap-6">
         <a 
-          href="mailto:luke+portfolio@nethercott.com" 
+          href="mailto:contact@lucasnethercott.com" 
           className="text-white/70 hover:text-accent1 hover:scale-110 transition-all"
           aria-label="Email"
         >
@@ -44,7 +44,7 @@ export default function NavBar() {
           </svg>
         </a>
         <a
-          href="https://www.linkedin.com/in/luke-nethercott-9942702a4/"
+          href="https://www.linkedin.com/in/lucas-nethercott/"
           className="text-white/70 hover:text-[#0077b5] hover:scale-110 transition-all"
           aria-label="LinkedIn"
         >
