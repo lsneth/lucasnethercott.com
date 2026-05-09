@@ -30,7 +30,7 @@ export const roles: Role[] = [
   {
     company: "U.S. Department of the Treasury",
     title: "I.T. Specialist",
-    location: "SLC, UT",
+    location: "Salt Lake City, UT",
     dateRange: "Sep 2024 - March 2025",
     description: [
       "Maintained high availability for technical needs and proactively sought assignments",
@@ -68,11 +68,11 @@ export const roles: Role[] = [
     location: "Logan, UT",
     dateRange: "Apr 2020 - Dec 2022",
     description: [
-      "Designed, developed, and maintained a Shopify e-commerce website",
+      "Designed, developed, and maintained a Shopify eCommerce website",
       "Provided daily customer support regarding technology and order concerns",
       "Fulfilled online store orders and managed inventory workflows",
       "Created and managed successful Facebook and email marketing campaigns",
     ],
-    skills: ["Shopify", "Web Design", "Marketing", "E-commerce"],
+    skills: ["Shopify", "Web Design", "Marketing", "eCommerce"],
   },
 ]

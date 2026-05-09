@@ -63,7 +63,7 @@ export type Skill =
   | "Unit Testing"
   | "Web Design"
   | "Marketing"
-  | "E-commerce"
+  | "eCommerce"
   | "Python"
   | "FastAPI"
   | "OpenAI Codex"

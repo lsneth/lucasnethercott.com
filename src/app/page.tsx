@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <main className="pb-20">
       <div className="max-sm:my-10 sm:my-32" />
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col items-center text-center gap-4">
         <Text weight="medium" className="text-accent1 tracking-wide uppercase text-sm md:text-base">
           Hi, my name is
         </Text>
@@ -24,13 +24,13 @@ export default function Home() {
         </Text>
         <Text size="lg" weight="medium" className="text-white/60">
           {/* Technophile. Tinkerer. Early adopter. Productivity nerd. Self-hoster. AI Pragmatist. Software Engineer. Home-labber. */}
-          Technophile. AI Pragmatist. Software Engineer.
+          Technophile. AI Pragmatist. <br/>Software Engineer.
         </Text>
       </div>
       
       <div className="max-sm:my-10 sm:my-16" />
       
-      <Text size="sm" weight="normal" className="max-w-2xl text-white/80">
+      <Text size="sm" weight="normal" className="max-w-2xl text-center mx-auto text-white/80">
         I'm passionate about technology and I love to build solutions. Check out some of my experience below.
       </Text>
       
